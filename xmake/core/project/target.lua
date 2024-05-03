@@ -2859,7 +2859,7 @@ function target.linkname(filename, opt)
         print("filename", filename)
         return filename
     end
-    print("nil")
+    print("nil", filename)
 end
 
 -- new a target instance

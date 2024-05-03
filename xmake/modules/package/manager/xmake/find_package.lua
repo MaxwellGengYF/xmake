@@ -134,6 +134,7 @@ function _find_package_from_repo(name, opt)
                 local filename = path.filename(file)
                 if not symrefs[filename] then
                     if file:endswith(".so") or file:match(".+%.so%..+$") or file:endswith(".dylib") then
+                        print("file", file)
                         print("xxx", target.linkname(path.filename(file), {plat = opt.plat}))
                         table.insert(links, target.linkname(path.filename(file), {plat = opt.plat}))
                     end
